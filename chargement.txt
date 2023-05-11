@@ -1,6 +1,7 @@
-L'utilisateur lance la méthode ChargeurMagasin avec en paramètre rep. Cette méthode crée chargeur de type ChargeurMagasin.
+- Le main créer l'objet chargeur de la Classe ChargeurMagasin avec son constructeur et le paramètre "rep".
+- Le main utilise la méthode chargerMagasin() de la classe ChageurMagasin sur l'objet chargeur.
+- la méthode utlisée précedemment créé un objet magasin de classe Magasin, elle créée un objet chargeCd1 de la classe ChargeurCD avec le parametre fichier. Par la suite elle intéragie sur l'objet chargeCd1 avec la méthode chargerCD().
+- La méthode chargerCD() créer un objet cd 1 : CD avec un nom d'artiste et un nom de CD
+Et vient extraire et ajouter des pistes au cd x2.
+- Et la méthode chargerMagasin() fini par faire un ajouteCd() avec le cd1 en parametre.
 
-Ensuite, l'utilisateur lance la méthode chargerMagasin allant dans chargeur. Ce qui crée un magasin de type Magasin.
-La méthode chargerMagasin va aussi créer chargeCd1 de type ChargeurCD.
-
-Une fois ces deux objets crées il charge le CD avec la méthode chargerCD. Dans la méthode chargerCD cela crée un cd1 de type CD avec en paramètre un artiste et un nomCd.
