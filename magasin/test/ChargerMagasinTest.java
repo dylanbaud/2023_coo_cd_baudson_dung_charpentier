@@ -10,7 +10,7 @@ public class ChargerMagasinTest {
 
     @Test
     public void testChargerMagasinValide() throws FileNotFoundException{
-        String repertoire = "../../musicbrainzSimple/musicbrainzSimple/";
+        String repertoire = "src/musicbrainzSimple/";
         ChargeurMagasin charge = new ChargeurMagasin(repertoire);
         Magasin resultat = charge.chargerMagasin();
         assertEquals(12, resultat.getNombreCds(), "Il devrait y avoir 12 pistes");
