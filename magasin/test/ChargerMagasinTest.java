@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.io.FileNotFoundException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ChargerMagasinTest {
 
@@ -16,4 +17,16 @@ public class ChargerMagasinTest {
         assertEquals(12, resultat.getNombreCds(), "Il devrait y avoir 12 pistes");
 
     }
+
+    @Test
+    public void testChargerMagasinNonValide(){
+        String repertoire = "src/mauvais/";
+        ChargeurMagasin charge = new ChargeurMagasin(repertoire);
+        FileNotFoundException exception = assertThrows(
+                FileNotFoundException.class, () -> {
+                    charge.chargerMagasin();
+                }
+        );
+    }
+
 }
