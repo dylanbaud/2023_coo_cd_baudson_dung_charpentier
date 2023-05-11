@@ -1,1 +1,4 @@
 # 2023_coo_cd_baudson_dung_charpentier
+CHARPENTIER Thomas
+DUNG Axel
+BAUDSON Dylan
