@@ -1,0 +1,6 @@
+L'utilisateur lance la méthode ChargeurMagasin avec en paramètre rep. Cette méthode crée chargeur de type ChargeurMagasin.
+
+Ensuite, l'utilisateur lance la méthode chargerMagasin allant dans chargeur. Ce qui crée un magasin de type Magasin.
+La méthode chargerMagasin va aussi créer chargeCd1 de type ChargeurCD.
+
+Une fois ces deux objets crées il charge le CD avec la méthode chargerCD. Dans la méthode chargerCD cela crée un cd1 de type CD avec en paramètre un artiste et un nomCd.
