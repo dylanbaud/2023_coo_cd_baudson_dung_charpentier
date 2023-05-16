@@ -2,6 +2,7 @@ import XML.ChargeurMagasin;
 import donnees.Magasin;
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -29,4 +30,13 @@ public class ChargerMagasinTest {
         );
     }
 
+    @Test
+    void trierAlbum() throws FileNotFoundException {
+        String repertoire = "src/musicbrainzSimple/";
+        ChargeurMagasin charge = new ChargeurMagasin(repertoire);
+        Magasin magasin = charge.chargerMagasin();
+        magasin.trierAlbum();
+        assertEquals("Believe", magasin.getCd(0).getNomCD(), "ça devrait être Believe");
+        assertEquals("Whitney Houston", magasin.getCd(magasin.getNombreCds()-1).getNomCD(), "ça devrait être Whitney Houston");
+    }
 }
