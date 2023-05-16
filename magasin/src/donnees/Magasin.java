@@ -66,6 +66,18 @@ public class Magasin {
     }
 
     public void trierAriste() {
+        ArrayList<CD> listeCdsTries = new ArrayList<CD>();
+        while(listeCds.size()>0){
+            int indicePetit =0;
+            for(int i = 1;i<listeCds.size();i++){
+                if(listeCds.get(i).getNomArtiste().compareTo(listeCds.get(indicePetit).getNomArtiste()) <0){
+                    indicePetit = i;
+                }
+            }
+            listeCdsTries.add(listeCds.get(indicePetit));
+            listeCds.remove(indicePetit);
+        }
+        listeCds = listeCdsTries;
     }
 
     public void trierAlbum() {

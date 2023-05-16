@@ -101,5 +101,9 @@ public class CD {
 		return this.nomCD;
 	}
 
+	public String getNomArtiste() {
+		return this.nomArtiste;
+	}
+
 	// TODO 
 }
