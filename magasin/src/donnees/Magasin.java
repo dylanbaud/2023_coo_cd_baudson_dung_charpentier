@@ -3,6 +3,7 @@ package donnees;
 import main.ComparateurCd;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * La classe Magasin represente un magasin qui vend des CDs.</p>
@@ -112,5 +113,14 @@ public class Magasin {
         this.listeCds = listeCdsTries;
     }
 
+    public ArrayList<CD> chercherArtiste(String nom){
+       ArrayList<CD> newListe = new ArrayList<CD>();
+        for(CD cd : listeCds){
+            if(cd.getNomArtiste().equals(nom)){
+                newListe.add(cd);
+            }
+        }
+        return newListe;
+    }
 
 }
