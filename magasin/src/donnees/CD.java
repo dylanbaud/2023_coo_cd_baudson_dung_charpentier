@@ -105,5 +105,9 @@ public class CD {
 		return this.nomArtiste;
 	}
 
+	public List<InfoPiste> getPiste(){
+		return this.pistes;
+	}
+
 	// TODO 
 }
