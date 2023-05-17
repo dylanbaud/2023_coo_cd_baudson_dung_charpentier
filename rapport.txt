@@ -1,0 +1,13 @@
+Question 3
+Il n'y aurait des conséquences que si on utiliser 2 trie différents dans la classe main ou magasin.
+On aurait juste besoin de modifier la classe magasin et d'en créer 2 d'autres et ajouter 5 méthodes.
+Oui c'est beaucoup plus simple, car on aurait juste besoin de créer une classe permettant de choisir ce qu'on compare et on pourra trier ce que l'on veut.
+
+Question 4
+On utilise l'entiereté du code de l'autre méthode afin et on modifie juste les getteurs pour prendre les noms d'artistes au lieu des noms d'albums. Sinon on garde tout le reste car c'est le m^me fonctionnement. Si il y a des bugs, cela serait un soucis, car il y aurait des bugs dans les 2.
+
+Question 5
+Ce qui reste :
+Le code qui permet de reclasser la liste
+Ce qui change :
+La sélection par Album ou par Artiste

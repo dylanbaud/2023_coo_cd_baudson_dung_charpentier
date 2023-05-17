@@ -67,49 +67,49 @@ public class Magasin {
         return (res);
     }
 
-    public void trierAriste() {
-        ArrayList<CD> listeCdsTries = new ArrayList<CD>();
-        while (listeCds.size() > 0) {
-            int indicePetit = 0;
-            for (int i = 1; i < listeCds.size(); i++) {
-                if (listeCds.get(i).getNomArtiste().compareTo(listeCds.get(indicePetit).getNomArtiste()) < 0) {
-                    indicePetit = i;
-                }
-            }
-            listeCdsTries.add(listeCds.get(indicePetit));
-            listeCds.remove(indicePetit);
-        }
-        listeCds = listeCdsTries;
-    }
-
-    public void trierAlbum() {
-        ArrayList<CD> listeCdsTries = new ArrayList<CD>();
-        while (listeCds.size() > 0) {
-            int indicePetit = 0;
-            for (int i = 1; i < listeCds.size(); i++) {
-                if (listeCds.get(i).getNomCD().compareTo(listeCds.get(indicePetit).getNomCD()) < 0) {
-                    indicePetit = i;
-                }
-            }
-            listeCdsTries.add(listeCds.get(indicePetit));
-            listeCds.remove(indicePetit);
-        }
-        listeCds = listeCdsTries;
-    }
+//    public void trierAriste() {
+//        ArrayList<CD> listeCdsTries = new ArrayList<CD>();
+//        while (listeCds.size() > 0) {
+//            int indicePetit = 0;
+//            for (int i = 1; i < listeCds.size(); i++) {
+//                if (listeCds.get(i).getNomArtiste().compareTo(listeCds.get(indicePetit).getNomArtiste()) < 0) {
+//                    indicePetit = i;
+//                }
+//            }
+//            listeCdsTries.add(listeCds.get(indicePetit));
+//            listeCds.remove(indicePetit);
+//        }
+//        listeCds = listeCdsTries;
+//    }
+//
+//    public void trierAlbum() {
+//        ArrayList<CD> listeCdsTries = new ArrayList<CD>();
+//        while (listeCds.size() > 0) {
+//            int indicePetit = 0;
+//            for (int i = 1; i < listeCds.size(); i++) {
+//                if (listeCds.get(i).getNomCD().compareTo(listeCds.get(indicePetit).getNomCD()) < 0) {
+//                    indicePetit = i;
+//                }
+//            }
+//            listeCdsTries.add(listeCds.get(indicePetit));
+//            listeCds.remove(indicePetit);
+//        }
+//        listeCds = listeCdsTries;
+//    }
 
     public void trier(ComparateurCd cpcd) {
         ArrayList<CD> listeCdsTries = new ArrayList<CD>();
-        while (listeCds.size() > 0) {
+        while (this.listeCds.size() > 0) {
             int indicePetit = 0;
-            for (int i = 1; i < listeCds.size(); i++) {
-                if (cpcd.etreAvant(listeCds.get(i), listeCds.get(indicePetit))) {
+            for (int i = 1; i < this.listeCds.size(); i++) {
+                if (cpcd.etreAvant(this.listeCds.get(i), this.listeCds.get(indicePetit))) {
                     indicePetit = i;
                 }
             }
-            listeCdsTries.add(listeCds.get(indicePetit));
-            listeCds.remove(indicePetit);
+            listeCdsTries.add(this.listeCds.get(indicePetit));
+            this.listeCds.remove(indicePetit);
         }
-        listeCds = listeCdsTries;
+        this.listeCds = listeCdsTries;
     }
 
 
