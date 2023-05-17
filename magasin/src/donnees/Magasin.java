@@ -68,7 +68,7 @@ public class Magasin {
     }
 
 //    public void trierAriste() {
-//        ArrayList<CD> listeCdsTries = new ArrayList<CD>();
+//        ArrayList<CD> listeCdsTri es = new ArrayList<CD>();
 //        while (listeCds.size() > 0) {
 //            int indicePetit = 0;
 //            for (int i = 1; i < listeCds.size(); i++) {

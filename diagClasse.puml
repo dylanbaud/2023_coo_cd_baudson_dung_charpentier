@@ -1,0 +1,57 @@
+@startuml
+title Magasin
+
+'''classes
+interface ComparateurCd{
++ {abstract} etreAvant(CD cd1, CD2) : boolean
+}
+
+class ComparateurArtiste{
++ {abstract} etreAvant(CD cd1, CD2) : boolean
+}
+
+class ComparateurAlbum{
++ {abstract} etreAvant(CD cd1, CD2) : boolean
+}
+
+class Magasin{
++Magasin()
++ajouteCD(CD cdAAjouter)
++toString() : String
++getNombreCds() : int
++getCD(i : int) : CD
++trier(cpcd : ComparateurCd)
+}
+
+
+class CD{
++SEPARATOR : static final String
+-nomArtiste : String
+-nomCD : String
++CD(artiste : String, nomCDParam : String)
++ajouterPiste(infoPiste : InfoPiste)
++toString() : String
++numeroPiste(i : int) : String
++getNomCD() : String
++getNomArtiste() : String
+}
+
+class InfoPiste{
+-nomPiste : String
+-dureeMillisecondes : int
++InfoPiste(nom : String, duree : int)
++toString() : String
+-dureeEnMinutes(millisecondes : int) : String
+}
+
+
+
+
+
+''' relations
+ComparateurCd <|.. ComparateurAlbum
+ComparateurCd <|.. ComparateurArtiste
+
+Magasin "*" --> "*" CD : -listeCds : ArrayList
+CD "*" --> "1" InfoPiste : -pistes : List
+@enduml

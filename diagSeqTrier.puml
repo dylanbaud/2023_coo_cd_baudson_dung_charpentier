@@ -1,0 +1,46 @@
+@startuml
+participant "magasin:Magasin" as magasin
+participant "listeCD:ArrayList<CD>" as listeCD
+participant "cd_j:CD" as cd_j
+participant "cd_i:CD" as cd_i
+[-> magasin : trierAlbum()
+activate magasin
+	magasin -> listeCD : size()
+	activate listeCD
+	magasin <-- listeCD : nbCDs
+	deactivate listeCD
+	loop 0 <= i < nbCDs
+		magasin -> listeCD : get(i)
+		activate listeCD
+		magasin <-- listeCD : cd_i
+		deactivate listeCD
+		note over magasin: indiceSelection = i \ncdSelectionne = cd_i
+		loop i+1 <= j < nbCDs
+			magasin -> listeCD : get(j)
+			activate listeCD
+			magasin <-- listeCD : cd_j
+			deactivate listeCD
+			magasin -> cd_j : etreAvantAlbum(cd_i)
+			activate cd_j
+				cd_j -> cd_i : cd_i.nomCD
+				activate cd_i
+				cd_j <-- cd_i : nomCD
+				deactivate cd_i
+			magasin <-- cd_j : estAvant
+			deactivate cd_j
+			alt estAvant
+				note over magasin : indiceSelection = j \ncdSelectionne = cd_j
+			end
+		end
+		magasin -> listeCD : set(indiceSelection, cd_i)
+		activate listeCD
+		magasin <-- listeCD
+		deactivate listeCD
+		magasin -> listeCD : set(i, cdSelectionne)
+		activate listeCD
+		magasin <-- listeCD
+		deactivate listeCD
+	end		
+[<-- magasin
+deactivate magasin
+@enduml
