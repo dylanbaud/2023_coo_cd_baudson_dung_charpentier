@@ -49,10 +49,10 @@ public class ChargerMagasinTest {
         String repertoire = "src/musicbrainzSimple/";
         ChargeurMagasin charge = new ChargeurMagasin(repertoire);
         Magasin magasin = charge.chargerMagasin();
-        ArrayList<CD> listeTest = new ArrayList<CD>();
+
         ArrayList<CD> listeComparer = new ArrayList<CD>();
-        listeTest = magasin.chercher(new SelecteurArtiste("Celine Dion"));
-        assertEquals(listeComparer, listeTest, "Les cds devraient être ceux de Celine Dion");
+        ArrayList<CD>listeTest = magasin.chercher(new SelecteurArtiste("The Rolling Stones"));
+        assertEquals(listeComparer, listeTest, "Les cds devraient être ceux des Rolling Stones");
 
     }
 }
