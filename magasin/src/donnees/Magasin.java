@@ -115,12 +115,14 @@ public class Magasin {
 
     public ArrayList<CD> chercherArtiste(String nom){
        ArrayList<CD> newListe = new ArrayList<CD>();
-        for(CD cd : listeCds){
+        for(CD cd : this.listeCds){
             if(cd.getNomArtiste().equals(nom)){
                 newListe.add(cd);
             }
         }
         return newListe;
     }
+
+
 
 }
