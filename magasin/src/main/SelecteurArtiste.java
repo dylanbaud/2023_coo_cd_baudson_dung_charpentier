@@ -8,6 +8,7 @@ public class SelecteurArtiste implements Selecteur {
     public SelecteurArtiste(String nom){
         this.nomArtiste=nom;
     }
+    @Override
     public boolean garderCd(CD cd) {
        if(cd.getNomArtiste().equals(this.nomArtiste)){
            return true;
