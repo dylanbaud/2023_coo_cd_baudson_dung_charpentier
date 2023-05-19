@@ -1,9 +1,9 @@
 package donnees;
 
 import main.ComparateurCd;
+import main.Selecteur;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * La classe Magasin represente un magasin qui vend des CDs.</p>
@@ -113,16 +113,23 @@ public class Magasin {
         this.listeCds = listeCdsTries;
     }
 
-    public ArrayList<CD> chercherArtiste(String nom){
-       ArrayList<CD> newListe = new ArrayList<CD>();
-        for(CD cd : this.listeCds){
-            if(cd.getNomArtiste().equals(nom)){
+    public ArrayList<CD> chercherArtiste(String nom) {
+        ArrayList<CD> newListe = new ArrayList<CD>();
+        for (CD cd : this.listeCds) {
+            if (cd.getNomArtiste().equals(nom)) {
                 newListe.add(cd);
             }
         }
         return newListe;
     }
 
-
-
+    public ArrayList<CD> chercher(Selecteur selecteur) {
+        ArrayList<CD> newListe = new ArrayList<CD>();
+        for (CD cd : this.listeCds) {
+            if (selecteur.garderCd(cd)) {
+                newListe.add(cd);
+            }
+        }
+        return newListe;
+    }
 }
